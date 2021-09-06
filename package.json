@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon index.js",
+        "start": "node index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
@@ -12,9 +12,10 @@
     "dependencies": {
         "@slack/bolt": "^3.6.0",
         "dotenv": "^8.2.0",
+        "moment-timezone": "^0.5.33",
         "slackbots": "^1.2.0"
     },
     "engines": {
         "node": "14.x"
-      }
+    }
 }
