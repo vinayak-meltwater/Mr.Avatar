@@ -24,7 +24,7 @@ app.message(async ({ message, say }) => {
   }
 
   // say() sends a message to the channel where the event was triggered
-  if (!message.thread_ts && (currentHour < 9 || currentHour > 17)) {
+  if (message.user && !message.thread_ts && (currentHour < 9 || currentHour > 17)) {
     await say({
       text: `Unfortunately <@${message.user}>! Your ping has come while Team Sprinters is currently offline. Team will replay during the normal (IST) working hours. For service-affecting issues, Please page our on-call engineer for immediate response through slack \`/genie alert __alert_message__ for sprinters\``,
       thread_ts: threadTs,
